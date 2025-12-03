@@ -1,6 +1,5 @@
 ---
 title: Linux 安装Miniconda3
-cid: 3
 type: post
 created: 1741186634
 modified: 1741186634
