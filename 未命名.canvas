@@ -1,17 +1,29 @@
 {
 	"nodes":[
-		{"id":"b305f80f3a430433","x":-360,"y":-80,"width":250,"height":60,"type":"text","text":"14 数据库 取数据"},
-		{"id":"3f84519ea707d2e2","x":-360,"y":40,"width":250,"height":80,"type":"text","text":"自去重 + 黑名单去重"},
-		{"id":"1b69c04223ce97fd","x":-360,"y":160,"width":250,"height":60,"type":"text","text":"生成csv + upload"},
-		{"id":"1aadc889a34ff1b7","x":60,"y":260,"width":250,"height":60,"type":"text","text":"Server Api"},
-		{"id":"e3658797d7ad0b7b","x":60,"y":400,"width":250,"height":60,"type":"text","text":"保存文件 入库"},
-		{"id":"327e28e57c090b4e","x":380,"y":-50,"width":250,"height":60,"type":"text","text":"server_http"}
+		{"id":"b305f80f3a430433","type":"text","text":"14 数据库 取数据","x":-360,"y":-80,"width":250,"height":60},
+		{"id":"3f84519ea707d2e2","type":"text","text":"自去重 + 黑名单去重","x":-360,"y":40,"width":250,"height":80},
+		{"id":"1b69c04223ce97fd","type":"text","text":"生成csv + upload","x":-360,"y":160,"width":250,"height":60},
+		{"id":"1aadc889a34ff1b7","type":"text","text":"Server Api","x":60,"y":260,"width":250,"height":60},
+		{"id":"e3658797d7ad0b7b","type":"text","text":"保存文件 入库","x":60,"y":400,"width":250,"height":60},
+		{"id":"327e28e57c090b4e","type":"text","text":"server_http","x":480,"y":0,"width":250,"height":60},
+		{"id":"a6863efb153b92c3","type":"text","text":"取pedding+timestamp","x":480,"y":100,"width":250,"height":50},
+		{"id":"83655c081c384693","x":480,"y":180,"width":250,"height":50,"type":"text","text":"过滤IP"},
+		{"id":"dfe211591c041d8c","x":480,"y":260,"width":250,"height":60,"type":"text","text":"下载任务"},
+		{"id":"ceb2cef72cac2f55","x":780,"y":260,"width":250,"height":60,"type":"text","text":"得到结果 【success 、iled】 同时修改数据库"},
+		{"id":"4eb6bb8556ae8f7d","x":480,"y":370,"width":250,"height":60,"type":"text","text":"打印输出【success 、iled】"},
+		{"id":"76d7d9b44954ebd8","x":780,"y":175,"width":250,"height":60,"type":"text","text":"设置数据库"}
 	],
 	"edges":[
 		{"id":"8e70ef01b27505fe","fromNode":"b305f80f3a430433","fromSide":"bottom","toNode":"3f84519ea707d2e2","toSide":"top"},
 		{"id":"ffb9c8cc7ce6ba97","fromNode":"3f84519ea707d2e2","fromSide":"bottom","toNode":"1b69c04223ce97fd","toSide":"top"},
 		{"id":"87699f77ace22135","fromNode":"1b69c04223ce97fd","fromSide":"right","toNode":"1aadc889a34ff1b7","toSide":"left"},
 		{"id":"5aa61a7f2a0fdacb","fromNode":"1aadc889a34ff1b7","fromSide":"bottom","toNode":"e3658797d7ad0b7b","toSide":"top"},
-		{"id":"6d46ff695eb6940b","fromNode":"3f84519ea707d2e2","fromSide":"right","toNode":"327e28e57c090b4e","toSide":"left"}
+		{"id":"48fce9e2d8e722bc","fromNode":"327e28e57c090b4e","fromSide":"bottom","toNode":"a6863efb153b92c3","toSide":"top"},
+		{"id":"82588ba243f25354","fromNode":"dfe211591c041d8c","fromSide":"right","toNode":"ceb2cef72cac2f55","toSide":"left"},
+		{"id":"8365b7950cf422ac","fromNode":"dfe211591c041d8c","fromSide":"bottom","toNode":"4eb6bb8556ae8f7d","toSide":"top"},
+		{"id":"6a2f244a4a5d3eda","fromNode":"a6863efb153b92c3","fromSide":"bottom","toNode":"83655c081c384693","toSide":"top"},
+		{"id":"55c4790e366a2760","fromNode":"83655c081c384693","fromSide":"bottom","toNode":"dfe211591c041d8c","toSide":"top"},
+		{"id":"022e33a3a0499d45","fromNode":"3f84519ea707d2e2","fromSide":"right","toNode":"83655c081c384693","toSide":"top"},
+		{"id":"0ceb297b074f01e0","fromNode":"83655c081c384693","fromSide":"right","toNode":"76d7d9b44954ebd8","toSide":"left"}
 	]
 }
