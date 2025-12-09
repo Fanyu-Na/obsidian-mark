@@ -12,9 +12,6 @@ slug: git-config
 ### 1. 配置全局用户名和邮箱
 如果你想要为你的所有Git仓库设置相同的用户名和邮箱，你可以使用git config --global命令。打开你的终端或命令提示符，然后输入以下命令：
 
-
-
-
 ```bash
 git config --global user.name "Ekzykes"
 git config --global user.email "atlaseuan@163.com"
