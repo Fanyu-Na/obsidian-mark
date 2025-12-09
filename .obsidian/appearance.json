@@ -1,3 +1,6 @@
 {
-  "cssTheme": "Blue Topaz"
+  "cssTheme": "Minimal",
+  "theme": "system",
+  "accentColor": "#d350a9",
+  "nativeMenus": true
 }
