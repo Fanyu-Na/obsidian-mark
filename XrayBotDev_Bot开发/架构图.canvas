@@ -1,1 +1,27 @@
-{}
+{
+	"nodes": [
+		{"id": "res_group", "type": "group", "x": -800, "y": -400, "width": 300, "height": 450, "label": "Resources (资源仓库)"},
+		{"id": "res_static", "type": "text", "text": "**xray_static**\n通用字体/Logo", "x": -780, "y": -330, "width": 260, "height": 80},
+		{"id": "res_maimai", "type": "text", "text": "**xray_maimai_static**\n舞萌封面 & UI底板", "x": -780, "y": -230, "width": 260, "height": 80},
+		{"id": "res_chu", "type": "text", "text": "**xray_chunithm_static**\n中二素材库", "x": -780, "y": -130, "width": 260, "height": 80},
+
+		{"id": "lib_group", "type": "group", "x": -400, "y": -550, "width": 800, "height": 850, "label": "Libraries (核心业务逻辑)"},
+		{"id": "lib_maimai", "type": "text", "text": "### xray_maimai\n- **data_provider**: API切换 & 模型\n- **score_calculator**: Rating/B50计算\n- **image_render**: 绘图逻辑", "x": -380, "y": -480, "width": 350, "height": 180},
+		{"id": "lib_chu", "type": "text", "text": "### xray_chunithm\n结构同舞萌 (逻辑复用)", "x": 10, "y": -480, "width": 350, "height": 180},
+		{"id": "lib_dict", "type": "text", "text": "### xray_dictionary\n内存高速查歌、别名索引、热更新", "x": -380, "y": -250, "width": 350, "height": 100},
+		{"id": "lib_db", "type": "text", "text": "### xray_database\nRemote Mongo (Motor)\nUser & Music CRUD", "x": 10, "y": -250, "width": 350, "height": 100},
+		{"id": "lib_user", "type": "text", "text": "### xray_user_system\n用户权限、绑定信息处理层", "x": -380, "y": -100, "width": 350, "height": 100},
+		{"id": "lib_common", "type": "text", "text": "### xray_common\n- **asset_manager**: 统一资源加载\n- **http_utils**: 网络请求基建", "x": 10, "y": -100, "width": 350, "height": 120},
+
+		{"id": "plugin_group", "type": "group", "x": 500, "y": -400, "width": 300, "height": 450, "label": "Plugins (NoneBot 接入层)"},
+		{"id": "plug_maimai", "type": "text", "text": "**xray_module_maimai**\n指令: /b50, /minfo\n调用 Libs 实现业务", "x": 520, "y": -330, "width": 260, "height": 120},
+		{"id": "plug_chu", "type": "text", "text": "**xray_module_chunithm**\n指令: /cbest, /cinfo", "x": 520, "y": -180, "width": 260, "height": 100}
+	],
+	"edges": [
+		{"id": "e1", "fromNode": "plug_maimai", "fromSide": "left", "toNode": "lib_maimai", "toSide": "right"},
+		{"id": "e2", "fromNode": "plug_chu", "fromSide": "left", "toNode": "lib_chu", "toSide": "right"},
+		{"id": "e3", "fromNode": "lib_maimai", "fromSide": "bottom", "toNode": "lib_dict", "toSide": "top"},
+		{"id": "e4", "fromNode": "lib_maimai", "fromSide": "bottom", "toNode": "lib_db", "toSide": "top"},
+		{"id": "e5", "fromNode": "lib_common", "fromSide": "left", "toNode": "res_group", "toSide": "right", "label": "资源加载"}
+	]
+}
